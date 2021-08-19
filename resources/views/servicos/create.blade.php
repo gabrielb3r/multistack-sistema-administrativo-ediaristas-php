@@ -8,8 +8,8 @@
 
 @section('content')
     <form action="{{route('servicos.store')}}" method="post">
-        @include('_mensagens')
-        
+        @include('_mensagens')  
         @include('servicos._form')
     </form>
 @stop
+
