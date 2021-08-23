@@ -8,6 +8,11 @@ use Illuminate\Http\Request;
 
 class ServicoController extends Controller
 {
+    /**
+     * Lista serviços
+     *
+     * @return void
+     */
     public function index()
     {
         $servicos = Servico::paginate(15);
@@ -25,7 +30,7 @@ class ServicoController extends Controller
         $dados = $request->except('_token');
         Servico::create($dados);
 
-        return redirect()->route('servicos.index');
+        return redirect()->route('servicos.index')->with('mensagem', 'Serviço criado com sucesso!');
     }
 
     public function edit(int $id)
@@ -40,6 +45,6 @@ class ServicoController extends Controller
         $servico = Servico::findOrFail($id);
         $servico->update($dados);
         
-        return redirect()->route('servicos.index');
+        return redirect()->route('servicos.index')->with('mensagem', 'Serviço atualizado com sucesso!');
     }
 }

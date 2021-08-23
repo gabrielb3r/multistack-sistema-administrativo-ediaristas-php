@@ -21,7 +21,7 @@ class CreateServicosTable extends Migration
             $table->decimal('valor_minimo',10,2);
             $table->integer('quantidade_horas');
 
-            $table->decimal('porcentagem');
+            $table->integer('porcentagem');
 
             $table->decimal('valor_quarto',10,2);
             $table->integer('horas_quarto');

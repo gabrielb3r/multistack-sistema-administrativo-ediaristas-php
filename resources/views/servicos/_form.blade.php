@@ -14,9 +14,9 @@
                     <div class="form-group">
                         <label for="icone">Ícone</label>
                         <select name="icone" id="icone" class="form-control">
-                            <option value="twf-cleaning-1"{{isset($servico) && $servico->icone === 'twf-cleaning-1'? 'selected': ''}}>Ícone 1</option>
-                            <option value="twf-cleaning-2"{{isset($servico) && $servico->icone === 'twf-cleaning-2'? 'selected': ''}}>Ícone 2</option>
-                            <option value="twf-cleaning-3"{{isset($servico) && $servico->icone === 'twf-cleaning-3'? 'selected': ''}}>Ícone 3</option>
+                            <option value="twf-cleaning-1"{{old('icone', $servico->icone ?? '') === 'twf-cleaning-1'? 'selected': ''}}>Ícone 1</option>
+                            <option value="twf-cleaning-2"{{old('icone', $servico->icone ?? '') === 'twf-cleaning-2'? 'selected': ''}}>Ícone 2</option>
+                            <option value="twf-cleaning-3"{{old('icone', $servico->icone ?? '') === 'twf-cleaning-3'? 'selected': ''}}>Ícone 3</option>
                         </select>
                     </div>
                 </div>
